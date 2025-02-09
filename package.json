@@ -6,9 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "start": "node dist/main",
+    "start": "dist/main.js",
     "build": "npm run build:app",
-    "build:app": "tsc",    
+    "build:app": "tsc",  
+    "postinstall": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",  
     "prestart": "npm run build",
     "start:dev": "nest start --watch",
